@@ -8,6 +8,7 @@
 <meta property="og:title" content="[One]Log Mastery — Formation gratuite"/>
 <meta property="og:description" content="Signaux XAU/USD quotidiens, méthode SMC simplifiée. 100% gratuit pendant la beta."/>
 <meta property="og:type" content="website"/>
+<link rel="icon" href="logo.jpg" type="image/jpeg"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
 <style>
@@ -26,7 +27,7 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
 .wrapper{position:relative;z-index:1;max-width:700px;margin:0 auto;padding:0 24px;}
 
 /* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:16px 32px;background:linear-gradient(to bottom,rgba(8,8,8,.96),transparent);backdrop-filter:blur(4px);}
+nav{position:fixed;top:38px;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:16px 32px;background:linear-gradient(to bottom,rgba(8,8,8,.96),transparent);backdrop-filter:blur(4px);}
 .nav-logo{display:flex;align-items:center;gap:12px;}
 .nav-logo img{height:36px;width:auto;}
 .logo-text{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:700;color:var(--gold);letter-spacing:.06em;}
@@ -34,11 +35,11 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .nav-badge{font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);border:1px solid var(--border);padding:5px 12px;border-radius:2px;}
 
 /* URGENCY BANNER */
-.urgency-bar{background:linear-gradient(90deg,rgba(201,168,76,.08),rgba(0,180,216,.08));border-bottom:1px solid var(--border);padding:10px 24px;text-align:center;font-size:.75rem;letter-spacing:.08em;color:var(--gold-light);position:relative;z-index:99;}
+.urgency-bar{background:linear-gradient(90deg,rgba(201,168,76,.1),rgba(0,180,216,.1)) var(--black);border-bottom:1px solid var(--border);padding:10px 24px;text-align:center;font-size:.75rem;letter-spacing:.08em;color:var(--gold-light);position:fixed;top:0;left:0;right:0;z-index:101;}
 .urgency-bar span{color:var(--text);}
 
 /* HERO */
-.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:140px 0 80px;}
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:165px 0 80px;}
 .hero-tag{font-size:.68rem;letter-spacing:.25em;text-transform:uppercase;color:var(--blue);margin-bottom:24px;display:flex;align-items:center;gap:12px;opacity:0;animation:fadeUp .8s ease .2s forwards;}
 .hero-tag::before{content:'';display:block;width:32px;height:1px;background:var(--blue);}
 .hero-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2.8rem,8vw,5rem);font-weight:700;line-height:1.05;letter-spacing:-.01em;color:var(--text);margin-bottom:22px;opacity:0;animation:fadeUp .8s ease .4s forwards;}
@@ -148,6 +149,8 @@ footer{border-top:1px solid var(--border);padding:28px 0;}
 .reveal{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s ease;}
 .reveal.visible{opacity:1;transform:none;}
 
+#inscription{scroll-margin-top:120px;}
+
 /* MOBILE */
 @media(max-width:480px){
   nav{padding:14px 18px;}
@@ -157,6 +160,7 @@ footer{border-top:1px solid var(--border);padding:28px 0;}
   .hero-cta-group{flex-direction:column;}
   .btn-primary,.btn-secondary{justify-content:center;}
   .ticker-bar{margin:40px -18px 0;}
+  .hero{padding:155px 0 60px;}
 }
 </style>
 </head>
@@ -172,7 +176,7 @@ footer{border-top:1px solid var(--border);padding:28px 0;}
 <!-- NAV -->
 <nav>
   <div class="nav-logo">
-    <img id="nav-logo" src="" alt="[One]Log Mastery"/>
+    <img id="nav-logo" src="logo.jpg" alt="[One]Log Mastery" loading="eager" onerror="this.style.display='none'"/>
     <div class="logo-text">[One]<span>Log</span> Mastery</div>
   </div>
   <div class="nav-badge">Formation Gratuite</div>
@@ -195,7 +199,7 @@ footer{border-top:1px solid var(--border);padding:28px 0;}
     </p>
     <div class="hero-cta-group">
       <a href="#inscription" class="btn-primary">✦ Je rejoins — C'est gratuit</a>
-      <a href="https://t.me/OneLogMastery" target="_blank" class="btn-secondary">Rejoindre Telegram →</a>
+      <a href="https://t.me/OneLogMastery" target="_blank" rel="noopener noreferrer" class="btn-secondary">Rejoindre Telegram →</a>
     </div>
 
     <div class="ticker-bar">
@@ -349,7 +353,7 @@ footer{border-top:1px solid var(--border);padding:28px 0;}
     <p class="form-sub reveal">Ton accès Telegram arrive dans les 24h après inscription.</p>
 
     <div class="form-box reveal">
-      <form id="regForm" action="https://formspree.io/f/abubakradamou@gmail.com" method="POST">
+      <form id="regForm" action="https://formspree.io/abubakradamou@gmail.com" method="POST">
         <div class="field">
           <label for="prenom">Prénom *</label>
           <input type="text" id="prenom" name="prenom" placeholder="Ton prénom" required/>
@@ -371,7 +375,7 @@ footer{border-top:1px solid var(--border);padding:28px 0;}
         <div class="success-icon">🎯</div>
         <div class="success-title">Bienvenue dans [One]Log !</div>
         <div class="success-body">Vérifie ton email dans les 24h.<br/>Rejoins aussi le Telegram pour les signaux en direct.</div>
-        <a href="https://t.me/OneLogMastery" target="_blank" class="btn-primary" style="display:inline-flex;margin-top:10px;">Rejoindre Telegram →</a>
+        <a href="https://t.me/OneLogMastery" target="_blank" rel="noopener noreferrer" class="btn-primary" style="display:inline-flex;margin-top:10px;">Rejoindre Telegram →</a>
       </div>
 
       <p class="form-guarantee">100% gratuit · Pas de spam · Désabonnement en 1 clic</p>
@@ -384,35 +388,34 @@ footer{border-top:1px solid var(--border);padding:28px 0;}
   <div class="wrapper">
     <div class="footer-inner">
       <div class="footer-logo">
-        <img id="footer-logo" src="" alt="[One]Log"/>
+        <img id="footer-logo" src="logo.jpg" alt="[One]Log" loading="lazy" onerror="this.style.display='none'"/>
         <span style="font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:.95rem;">[One]Log Mastery</span>
       </div>
       <p class="footer-text">Fondé à Ngaoundéré, Cameroun 🇨🇲 · © 2026 [One]Log Mastery</p>
       <div class="footer-links">
-        <a href="https://t.me/OneLogMastery" target="_blank">Telegram</a>
-        <a href="https://t.me/Assistance_OneLog" target="_blank">@Assistance_OneLog</a>
-        <a href="https://twitter.com/Adamou_Aboubakr" target="_blank">@Adamou_Aboubakr</a>
-        <a href="https://instagram.com/onelogtech" target="_blank">@onelogtech</a>
+        <a href="https://t.me/OneLogMastery" target="_blank" rel="noopener noreferrer">Telegram</a>
+        <a href="https://t.me/Assistance_OneLog" target="_blank" rel="noopener noreferrer">@Assistance_OneLog</a>
+        <a href="https://twitter.com/Adamou_Aboubakr" target="_blank" rel="noopener noreferrer">@Adamou_Aboubakr</a>
+        <a href="https://instagram.com/onelogtech" target="_blank" rel="noopener noreferrer">@onelogtech</a>
       </div>
     </div>
   </div>
 </footer>
 
 <script>
-/* LOGO BASE64 */
-
-
 /* PARTICLES */
 const canvas=document.getElementById('particles');
-const ctx=canvas.getContext('2d');
+const ctx=canvas?canvas.getContext('2d'):null;
 let particles=[];
-function resize(){canvas.width=window.innerWidth;canvas.height=window.innerHeight;}
+const PARTICLE_COUNT=window.innerWidth<768?30:70;
+function resize(){if(!canvas)return;canvas.width=window.innerWidth;canvas.height=window.innerHeight;}
 function createParticle(isBlue){
   const blue=isBlue||Math.random()<.35;
   return{x:Math.random()*canvas.width,y:Math.random()*canvas.height,vx:(Math.random()-.5)*.3,vy:-Math.random()*.35-.1,size:Math.random()*1.4+.3,alpha:Math.random()*.5+.2,life:1,blue};
 }
-function initParticles(){particles=Array.from({length:70},(_,i)=>createParticle(i%3===0));}
+function initParticles(){particles=Array.from({length:PARTICLE_COUNT},(_,i)=>createParticle(i%3===0));}
 function drawParticles(){
+  if(!ctx)return;
   ctx.clearRect(0,0,canvas.width,canvas.height);
   particles.forEach((p,i)=>{
     ctx.beginPath();ctx.arc(p.x,p.y,p.size,0,Math.PI*2);
@@ -423,12 +426,19 @@ function drawParticles(){
   });
   requestAnimationFrame(drawParticles);
 }
-window.addEventListener('resize',()=>{resize();initParticles();});
-resize();initParticles();drawParticles();
+if(ctx){
+  window.addEventListener('resize',()=>{resize();initParticles();});
+  resize();initParticles();drawParticles();
+}
 
-/* LOGO */
-document.getElementById('nav-logo').src='https://onelogtech.github.io/OneLog-Mastery-/logo.jpg';
-document.getElementById('footer-logo').src='https://onelogtech.github.io/OneLog-Mastery-/logo.jpg';
+/* DYNAMIC NAV POSITION based on urgency bar actual height */
+function positionNav(){
+  const bar=document.querySelector('.urgency-bar');
+  const nav=document.querySelector('nav');
+  if(bar&&nav)nav.style.top=bar.offsetHeight+'px';
+}
+positionNav();
+window.addEventListener('resize',positionNav);
 
 /* SCROLL REVEAL */
 const observer=new IntersectionObserver(entries=>{
